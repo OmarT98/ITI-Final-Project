@@ -1,0 +1,26 @@
+<div class="blog-post-details">
+    <!-- Blog Post Details -->
+    <div *ngIf="post">
+        <h1>{{ post.title }}</h1>
+        <p>By {{ post.author }} on {{ post.publishedDate | date:'longDate' }}</p>
+        <div class="post-content">
+            <p>{{ post.content }}</p>
+        </div>
+    </div>
+
+    <!-- Comments Section -->
+    <div class="comments-section" *ngIf="comments.length > 0">
+        <h3>Comments ({{ comments.length }})</h3>
+        <ul>
+            <li *ngFor="let comment of comments | slice:0:5">
+                <p><strong>{{ comment.name }}</strong> said:</p>
+                <p>{{ comment.body }}</p>
+            </li>
+        </ul>
+    </div>
+
+    <!-- No Comments -->
+    <div *ngIf="comments.length === 0">
+        <p>No comments available for this post.</p>
+    </div>
+</div>

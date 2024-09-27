@@ -1,0 +1,6 @@
+<!-- Display list of categories -->
+<ul>
+  <li *ngFor="let category of categories" (click)="viewDetails(category)">
+    {{ category.name }}
+  </li>
+</ul>

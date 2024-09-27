@@ -1,0 +1,13 @@
+<div class="blog-post-list">
+    <h1>Blog Posts</h1>
+    <div *ngFor="let post of posts" class="blog-post" (click)="viewDetails(post.id)">
+        <h2 class="post-title">{{ post.title }}</h2>
+        <p class="post-summary">{{ post.body }}</p>
+        <a class="read-more-btn" (click)="viewDetails(post.id)">Read More</a>
+    </div>
+
+    <mat-paginator [pageSize]="limit" [length]="totalPosts" (page)="onPageChange($event.pageIndex + 1)">
+    </mat-paginator>
+
+    <div *ngIf="loading" class="loading-indicator">Loading posts...</div>
+</div>

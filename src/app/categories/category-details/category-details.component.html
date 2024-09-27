@@ -1,0 +1,23 @@
+<!-- Error Message -->
+<div *ngIf="errorMessage" class="error-message">
+  {{ errorMessage }}
+</div>
+
+<h2>Products in {{ category }}</h2>
+
+<!-- Product Cards -->
+<div class="product-list">
+  <div *ngFor="let product of products" class="product-card-inner">
+    <img [src]="product.thumbnail" alt="{{ product.title }}" />
+    <div class="product-info">
+      <h3>{{ product.title }}</h3>
+      <p>{{ product.description }}</p>
+      <p>Price: {{ product.price | currency }}</p>
+    </div>
+  </div>
+</div>
+
+<!-- Message if no products are found -->
+<div *ngIf="products.length === 0">
+  No products found in this category.
+</div>

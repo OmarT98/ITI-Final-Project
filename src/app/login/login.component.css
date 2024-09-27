@@ -1,0 +1,158 @@
+.form {
+  border: 3px solid;
+  display: flex;
+  border-color: rgba(115, 124, 143, 0.127);
+  flex-direction: column;
+  width: 500px;
+  height: 400px;
+  margin-left: 50%;
+  margin-top: -20%;
+  background-color: rgba(95, 152, 222, 0.091);
+  border-radius: 2%;
+
+  animation: zak 20s infinite;
+  -webkit-backdrop-filter: blur(20px), saturate(22px);
+  backdrop-filter: blur(20px);
+}
+
+@keyframes zak {
+  0% {
+    border-color: rgba(0, 0, 139, 0.314);
+  }
+  10% {
+    border-color: rgba(0, 0, 128, 0.507);
+  }
+  20% {
+    border-color: rgba(56, 125, 205, 0.389);
+  }
+  30% {
+    border-color: rgba(22, 115, 159, 0.721);
+  }
+  40% {
+    border-color: steelblue;
+  }
+  50% {
+    border-color: rgba(171, 39, 39, 0.503);
+  }
+  60% {
+    border-color: rgb(9, 99, 129);
+  }
+  70% {
+    border-color: rgba(100, 148, 237, 0.525);
+  }
+  80% {
+    border-color: slateblue;
+  }
+  90% {
+    border-color: teal;
+  }
+  100% {
+    border-color: darkblue;
+  }
+}
+
+h1 {
+  padding-top: 40px;
+  text-align: center;
+  background-image: url(https://media.giphy.com/media/6dKRKMubZffyg/giphy.gif?cid=ecf05e47ibsdl51qm1tk6fpmr260fd50jnelsqa674vpyeyn&ep=v1_gifs_related&rid=giphy.gif&ct=g);
+  background-clip: text;
+  color: transparent;
+}
+h2 {
+  margin-left: 11px;
+
+  background-image: url(https://media.giphy.com/media/6dKRKMubZffyg/giphy.gif?cid=ecf05e47ibsdl51qm1tk6fpmr260fd50jnelsqa674vpyeyn&ep=v1_gifs_related&rid=giphy.gif&ct=g);
+  background-clip: text;
+  color: transparent;
+}
+.wl0 {
+  float: left;
+}
+.password {
+  margin-left: 5%;
+  margin-top: 2%;
+  height: 75px;
+  text-align: start;
+  width: 85%;
+}
+.maill {
+  margin-left: 5%;
+  margin-top: 2%;
+  height: 75px;
+  text-align: start;
+  width: 85%;
+  border-radius: 22px;
+}
+.maill input {
+  text-align: start;
+  border-radius: 22px;
+}
+.password input {
+  text-align: start;
+}
+
+.logo {
+  width: 590px;
+  height: 400px;
+  filter: contrast(0.9);
+  margin-top: -9%;
+  z-index: -1;
+  margin-left: -12%;
+}
+
+button {
+  color: rgb(255, 255, 255) !important;
+  margin-left: 36%;
+}
+.btn-donate {
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: rgb(86, 14, 14);
+  --btn-bg-2: rgb(70, 114, 126);
+  --btn-bg-color: rgb(255, 32, 32);
+  --radii: 0.5em;
+  cursor: pointer;
+  padding: 0.9em 1.4em;
+  min-width: 120px;
+  min-height: 44px;
+  font-size: var(--size, 1rem);
+  font-weight: 500;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(
+    325deg,
+    var(--btn-bg-2) 0%,
+    var(--btn-bg-1) 55%,
+    var(--btn-bg-2) 90%
+  );
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5),
+    0px 5px 5px -1px rgba(23, 24, 25, 0.25),
+    inset 4px 4px 8px rgba(52, 63, 69, 0.5),
+    inset -4px -4px 8px rgba(0, 0, 0, 0.35);
+}
+
+.btn-donate:hover {
+  background-position: right top;
+  color: rgb(179, 221, 255) !important;
+}
+
+.btn-donate:is(:focus, :focus-visible, :active) {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-donate {
+    transition: linear;
+  }
+}
+
+p {
+  margin-left: 11px;
+  font-size: 20px;
+  font-weight: 100;
+  font-style: italic;
+  color: rgb(4, 23, 34);
+}

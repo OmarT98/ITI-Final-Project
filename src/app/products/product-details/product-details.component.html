@@ -1,0 +1,13 @@
+<div class="overlay" (click)="close.emit()">
+    <mat-card class="product-details-card" (click)="$event.stopPropagation()">
+        <mat-card-header>
+            <mat-card-title>{{ product.title }}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image [src]="product.thumbnail" alt="{{ product.title }}" />
+        <mat-card-content>
+            <p>{{ product.description }}</p>
+            <p><strong>Price:</strong> ${{ product.price }}</p>
+            <p><strong>Category:</strong> {{ product.category }}</p>
+        </mat-card-content>
+    </mat-card>
+</div>

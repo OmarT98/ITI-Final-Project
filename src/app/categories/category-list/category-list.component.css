@@ -1,0 +1,23 @@
+ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  list-style: none; /* No bullet points */
+  padding: 0;
+}
+
+li {
+  margin: 20px; /* Spacing between categories */
+  cursor: pointer;
+  color: white; /* White text color */
+  text-decoration: none; /* No text decoration */
+  font-size: 18px;
+  transition: color 0.3s ease;
+  border: 1px solid rgba(67, 0, 70, 0.89);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+li:hover {
+  color: #ddd; /* Slight color change on hover */
+}

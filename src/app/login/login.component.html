@@ -1,0 +1,26 @@
+<br>
+<div class="welcome-message">
+    <h2>Welcome to Our oniun .</h2>
+    <p>We’re glad to have you here. Explore and enjoy <br>
+        the amazing features we’ve designed just for you.</p>
+    <p>Need help? Don’t hesitate to reach out. <br> We’re here to make your experience smooth and enjoyable. <br>
+        Let’s get started and get something amazing today!</p>
+
+</div>
+
+<img class="logo" [src]="lastlogo" alt="market">
+<div class="form">
+    <form (submit)="onSubmit()">
+        <h1>Login</h1>
+        <mat-form-field class="maill">
+            <input id="username" class="Username" matInput placeholder="Username" [(ngModel)]="username"
+                name="username">
+        </mat-form-field>
+        <mat-form-field class="password">
+            <input id="password" class="password" matInput placeholder="Password" [(ngModel)]="password" name="password"
+                type="password">
+        </mat-form-field>
+        <button class="btn-donate" mat-raised-button color="primary">Login</button>
+
+    </form>
+</div>

@@ -1,0 +1,22 @@
+<div class="product-list">
+    <div *ngFor="let product of products" class="product-card">
+        <mat-card class="product-card-inner" (click)="openDetails(product)">
+            <mat-card-title>{{ product.title }}</mat-card-title>
+            <img mat-card-image [src]="product.thumbnail" alt="{{ product.title }}" />
+            <mat-card-content>
+                <p>{{ product.description }}</p>
+                <p><strong>Price:</strong> ${{ product.price }}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
+
+    <!-- Mat Paginator at the bottom -->
+    <div class="paginator-container">
+        <mat-paginator [pageSize]="10" [length]="100" (page)="onPageChange($event.pageIndex + 1)">
+        </mat-paginator>
+    </div>
+
+    <!-- Product Details Overlay -->
+    <app-product-details *ngIf="selectedProduct" [product]="selectedProduct" (close)="closeDetails()">
+    </app-product-details>
+</div>

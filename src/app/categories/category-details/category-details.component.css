@@ -1,0 +1,51 @@
+/* General styling for the product list */
+
+h2 {
+  padding-top: 10px;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+}
+.product-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Product card styling */
+.product-card-inner {
+  width: 100%;
+  /* cursor: pointer; */
+  max-width: 300px;
+  background: rgba(255, 255, 255, 0.2); /* Transparent card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Drop shadow */
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  color: #ffffff; /* Text color easy on the eyes */
+  padding: 15px;
+}
+
+.product-card-inner:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-card-inner {
+    max-width: 100%;
+  }
+}
+
+/* Product image styling */
+.product-card-inner img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Product info */
+.product-info {
+  text-align: center;
+  margin-top: 10px;
+}

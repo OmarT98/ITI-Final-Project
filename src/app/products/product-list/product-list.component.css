@@ -1,0 +1,49 @@
+/* General styling for the product list */
+.product-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Product card styling */
+.product-card-inner {
+  width: 100%;
+  cursor: pointer;
+  max-width: 300px;
+  background: rgba(255, 255, 255, 0.2); /* Transparent card */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Drop shadow */
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  color: #ffffff; /* Text color easy on the eyes */
+  padding: 15px;
+}
+
+.product-card-inner:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-card-inner {
+    max-width: 100%;
+  }
+}
+
+/* Center the paginator and style it */
+.paginator-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+mat-paginator {
+  background: rgba(255, 255, 255, 0.2);
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 12px;
+  padding: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
